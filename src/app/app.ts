@@ -7,5 +7,19 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('introAngular');
+title:string = 'IEVN1003'
+
+duplicarNumero(a:number){
+return a *2
+}
+
+sumar(a:number,b:number){
+  return a+b
+}
+
+pelicula={
+  titulo: 'Spider-Man',
+  fechalanzamiento: new Date(),
+  precio: 234
+}
 }
