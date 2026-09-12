@@ -5,9 +5,27 @@ import { Component, signal } from '@angular/core';
   standalone: false,
   styleUrl: './app.css',
   templateUrl: './app.html',
+
+/*selector: 'app-root',
+template:`
+<div>
+<h1> {{title}}</h1>
+<app-heroes-list> </app-heroes-list>
+</div>
+`
+,
+
+standalone: false,
+styleUrl: './app.css'
+*/
+
 })
+
+
+
+
 export class App {
-title:string = 'IEVN1003'
+title:string = 'Juan Alejandro López Murillo'
 
 duplicarNumero(a:number){
 return a *2
