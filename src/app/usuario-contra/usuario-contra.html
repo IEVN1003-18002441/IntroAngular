@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-6">
+            <form>
+
+
+                <div class="mb-3">
+                    <label for="y2" class="form-label">Inserta tu usuario</label>
+                    <input type="text" name="user" class="form-control" id="user" [(ngModel)]="user"
+                        placeholder="usuario">
+                </div>
+                <div class="mb-3">
+                    <label for="y2" class="form-label">Inserta tu contraseña</label>
+                    <input type="password" name="pass" class="form-control" id="pass" [(ngModel)]="pass"
+                        placeholder="contraseña">
+                </div>
+                <button type="button" class="btn btn-primary" (click)="login()">
+                    Login
+                </button>
+
+                <h1 style="color: red;" *ngIf="!validacion">{{mensaje}}</h1>
+ <h1 style="color: green;" *ngIf="validacion">{{mensaje}}</h1>
+                    </form>
+
+<br>
+
+
+            <div class="mt-4">
+            </div>
+        </div>
+    </div>
+</div>
