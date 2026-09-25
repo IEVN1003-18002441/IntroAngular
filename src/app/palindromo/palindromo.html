@@ -1,0 +1,112 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-6">
+            <form>
+
+
+                <div class="mb-3">
+                    <label for="y2" class="form-label">Inserta una frase</label>
+                    <input type="text" name="frase" class="form-control" id="frase" [(ngModel)]="frase"
+                        placeholder="Ingresa una frase">
+                </div>
+                <button type="button" class="btn btn-primary" (click)="vocales()">
+                    Vocales
+                </button>
+
+
+                    <button type="button" class="btn btn-primary" (click)="palindromo()">
+                    Palindromo
+                </button>
+
+                 <button type="button" class="btn btn-primary" (click)="consonates()">
+                    Consonantes
+                </button>
+            </form>
+<br>
+
+
+            <div *ngIf="esPalindromo"><H1>Es un palindromo </H1></div>
+<br>
+
+            
+            <div *ngIf="numVocales>0">
+            <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Resultado del Conteo de Vocales</h5>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-striped table-hover mb-0 align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col" class="ps-4">Vocal</th>
+                        <th scope="col" class="text-center">Cantidad Encontrada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-bold ps-4">Letra A</td>
+                        <td class="text-center text-primary fw-bold">{{ numVocalesIn[0] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold ps-4">Letra E</td>
+                        <td class="text-center text-primary fw-bold">{{ numVocalesIn[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold ps-4">Letra I</td>
+                        <td class="text-center text-primary fw-bold">{{ numVocalesIn[2] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold ps-4">Letra O</td>
+                        <td class="text-center text-primary fw-bold">{{ numVocalesIn[3] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold ps-4">Letra U</td>
+                        <td class="text-center text-primary fw-bold">{{ numVocalesIn[4] }}</td>
+                    </tr>
+                    <tr class="table-info font-weight-bold">
+                        <td class="fw-bold ps-4">Total de Vocales</td>
+                        <td class="text-center fw-bold text-dark">
+                            {{ numVocalesIn[0] + numVocalesIn[1] + numVocalesIn[2] + numVocalesIn[3] + numVocalesIn[4] }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table> <br>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<div *ngIf="numConsonante > 0">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Resultado del Conteo de Consonantes</h5>
+        </div>
+
+        <div class="card-body p-0">
+            <table class="table table-striped table-hover mb-0 align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Descripción</th>
+                        <th scope="col" class="text-center">Cantidad Encontrada</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="table-info">
+                        <td class="fw-bold ps-4">Total de Consonantes</td>
+                        <td class="text-center fw-bold text-dark">
+                            {{ numConsonante }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+            <div class="mt-4">
+            </div>
+        </div>
+    </div>
+</div>
