@@ -1,0 +1,50 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-6">
+            <form>
+
+
+                <div class="mb-3">
+                    <label for="" class="form-label">x1</label>
+                    <input type="number" name="x1" class="form-control" [(ngModel)]="x1" id="x1"
+                        placeholder="Ingresa ">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">y1</label>
+                    <input type="number" name="y1" class="form-control" [(ngModel)]="y1" id="y1"
+                        placeholder="Ingresa ">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">x2</label>
+                    <input type="number" name="x2" class="form-control" [(ngModel)]="x2" id="x2"
+                        placeholder="Ingresa">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">y2</label>
+                    <input type="number" name="y2" class="form-control" [(ngModel)]="y2" id="y2"
+                        placeholder="Ingresa ">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">x3</label>
+                    <input type="number" name="x3" class="form-control" [(ngModel)]="x3" id="x3"
+                        placeholder="Ingresa ">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">y3</label>
+                    <input type="number" name="y3" class="form-control" [(ngModel)]="y3" id="y3"
+                        placeholder="Ingresa ">
+                </div>
+
+
+                <button type="button" (click)="calcular()" class="btn btn-primary">
+                    resultado
+                </button>
+            </form>
+            <br>
+<h1 *ngIf="!esTriangulo"> {{mensaje}}</h1>
+<h1 *ngIf="esTriangulo">Si es un triangulo y su area es {{area}}</h1>
+            <div class="mt-4">
+            </div>
+        </div>
+    </div>
+</div>

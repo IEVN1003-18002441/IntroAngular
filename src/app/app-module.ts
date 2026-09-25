@@ -8,8 +8,21 @@ import { HeroesFilterPipe } from './heroes/heroes-filter-pipe';
 import { OperaBas } from './formulario/opera-bas/opera-bas';
 import { Distancia } from './formulario/distancia/distancia';
 import { AreaFigura } from './area-figura/area-figura';
+import { Palindromo } from './palindromo/palindromo';
+import { Triangulos } from './triangulos/triangulos';
+import { UsuarioContra } from './usuario-contra/usuario-contra';
 @NgModule({
-  declarations: [App, HeroesList, HeroesFilterPipe, OperaBas, Distancia, AreaFigura],
+  declarations: [
+    App,
+    HeroesList,
+    HeroesFilterPipe,
+    OperaBas,
+    Distancia,
+    AreaFigura,
+    Palindromo,
+    Triangulos,
+    UsuarioContra,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
